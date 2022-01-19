@@ -1,0 +1,20 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{%static '../static/static.css' %}">
+    <title>Alura Receitas</title>
+</head>
+<body>
+    <h1>Alura Receitas</h1>
+    <a href="{% url 'index' %}">home</a>
+    <a href="{% url 'receitas' %}">receitas</a>
+    
+{% block content %}
+
+{% endblock %}
+</body>
+</html>
