@@ -3,10 +3,13 @@
 {% block content %}
 {% include 'partials/menu.html' %}
 
-{% for chave, nome_da_receita in nome_das_receitas.items %}
+{% if receitas %}
+{% for receita in receitas %}
 
-<h3><a href="#">{{ nome_da_receita }}</a></h3>
+<h3><a href="#">{{ receita.nome_receita }}</a></h3>
 
 {% endfor %}
+{% else %}
+{% endif %}
 
 {% endblock %}

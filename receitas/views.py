@@ -1,5 +1,5 @@
 from django.shortcuts import render
-
+from .models import Receitas
 # Create your views here.
 
 def index(request):
@@ -8,14 +8,14 @@ def index(request):
     return render(request,'index.html')
 
 def receitas(request):
-    receitas = {
-        1: 'Bolinho de chuva',
-        2: 'Omelete',
-        3: 'Carne moída',
-        4: 'Frango a passarinho'
-    }
+    receitas = Receitas.objects.all()
+
     dados = {
-        'nome_das_receitas': receitas
+        'receitas': receitas
     }
 
     return render(request, 'receitas.html',dados)
+
+def receita_cont(request):
+
+    return render(request, receita_cont)

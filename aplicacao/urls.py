@@ -20,5 +20,4 @@ from receitas import views
 urlpatterns = [
     path('', include('receitas.urls')),
     path('admin/', admin.site.urls),
-    path('/receitas', views.receitas, name='receitas')
 ]
