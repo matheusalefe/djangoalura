@@ -2,15 +2,11 @@
 {% load static %}
 {% block content %}
 {% include 'partials/menu.html' %}
-<h1>Bolinho de chuva</h1>
-<h2>Ingredientes</h2>
-<ul>
-    <li>Farinha de trigo</li>
-    <li>Leite</li>
-    <li>Ovo</li>
-    <li>Essência de baunilha</li>
-    <li>Fermento</li>
-    <li>Açúcar</li>
-</ul>
+
+{% for chave, nome_da_receita in nome_das_receitas.items %}
+
+<h3><a href="#">{{ nome_da_receita }}</a></h3>
+
+{% endfor %}
 
 {% endblock %}
